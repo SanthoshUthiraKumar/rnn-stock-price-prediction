@@ -62,7 +62,7 @@ model.add(layers.SimpleRNN(50,input_shape=(60,1)))
 model.add(layers.Dense(1))
 model.compile(optimizer='adam', loss='mse')
 model.summary()
-model.fit(X_train1,y_train,epochs=100, batch_size=32)
+model.fit(X_train1,y_train,epochs=50, batch_size=32)
 dataset_test = pd.read_csv('testset.csv')
 test_set = dataset_test.iloc[:,1:2].values
 test_set.shape
@@ -89,10 +89,10 @@ plt.show()
 ## OUTPUT
 
 ### True Stock Price, Predicted Stock Price vs time
-![Output1](https://github.com/SanthoshUthiraKumar/rnn-stock-price-prediction/assets/119477975/686070fc-4640-46be-ab21-a0a3a3118fbc)
+![Output3](https://github.com/SanthoshUthiraKumar/rnn-stock-price-prediction/assets/119477975/f57ecc47-e4f1-4a81-97ce-acdaf0ce196b)
 
 ### Mean Square Error
-![Output2](https://github.com/SanthoshUthiraKumar/rnn-stock-price-prediction/assets/119477975/b6c588f2-45b4-4f12-a291-4d604d0e8275)
+![Output4](https://github.com/SanthoshUthiraKumar/rnn-stock-price-prediction/assets/119477975/e00d3327-909c-4c48-8a4b-7ffec193f70b)
 
 ## RESULT
 Thus, we have successfully created a Simple RNN model for Stock Price Prediction.
