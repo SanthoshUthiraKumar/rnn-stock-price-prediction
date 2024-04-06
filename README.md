@@ -62,7 +62,7 @@ model.add(layers.SimpleRNN(50,input_shape=(60,1)))
 model.add(layers.Dense(1))
 model.compile(optimizer='adam', loss='mse')
 model.summary()
-model.fit(X_train1,y_train,epochs=50, batch_size=32)
+model.fit(X_train1,y_train,epochs=100, batch_size=32)
 dataset_test = pd.read_csv('testset.csv')
 test_set = dataset_test.iloc[:,1:2].values
 test_set.shape
